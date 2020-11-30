@@ -17,6 +17,10 @@ public class Formulario extends javax.swing.JFrame {
     public Formulario() {
         initComponents();
     }
+    
+    Double valor1, valor2;
+    String sinal;
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -315,6 +319,7 @@ public class Formulario extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        txtResultado.setText(" ");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -324,6 +329,10 @@ public class Formulario extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+       
+        valor1 = Double.parseDouble(txtResultado.getText());
+        sinal = "soma";
+         txtResultado.setText("");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -361,6 +370,10 @@ public class Formulario extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
+        valor2 = Double.parseDouble(txtResultado.getText());
+        if(sinal  == "soma"){
+            txtResultado.setText(String.valueOf( valor1 + valor2));
+        }
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
